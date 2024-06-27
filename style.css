@@ -5,18 +5,37 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #0447b1;
+    --secondary-color: #031747;
+    --text-color: #000000;
+    --button-background: #fff;
+    --button-color: #222;
+    --button-hover-background: #222;
+    --button-hover-color: #fff;
+    --button-disabled-color: #6dc5ca;
+    --button-border-color: #222;
+    --button-border-width: 1px;
+    --button-padding-y: 20px;
+    --button-margin-y: 5px;
+    --button-border-radius: 4px;
+    --button-transition: all 0.2s;
+    --button-max-width: 300px;
+    --large-margin: 100px;
+}
+
 .app {
-    background: #0447b1;
+    background: var(--primary-color);
     width: 90%;
     max-width: 600px;
-    margin: 100px auto 0;
+    margin: var(--large-margin) auto 0;
     border-radius: 10px;
     padding: 30px;
 }
 
 .app h1 {
     font-size: 25px;
-    color: #000000;
+    color: var(--text-color);
     font-weight: 600;
     border-bottom: 1px solid #333;
     padding-bottom: 30px;
@@ -29,29 +48,29 @@
 
 .quiz h2 {
     font-size: 18px;
-    color: #000000;
+    color: var(--text-color);
     font-weight: 600;
     text-align: center;
     margin-bottom: 10px;
 }
 
 .btn {
-    background: #fff;
-    color: #222;
+    background: var(--button-background);
+    color: var(--button-color);
     font-weight: 500;
     width: 100%;
-    border: 1px solid #222;
-    padding: 20px;
-    margin: 5px 0;
+    border: var(--button-border-width) solid var(--button-border-color);
+    padding: var(--button-padding-y);
+    margin: var(--button-margin-y) 0;
     text-align: center;
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     cursor: pointer;
-    transition: all 0.2s;
+    transition: var(--button-transition);
 }
 
 .btn:hover:not([disabled]) {
-    background: #222;
-    color: #fff;
+    background: var(--button-hover-background);
+    color: var(--button-hover-color);
 }
 
 .btn:disabled {
@@ -59,15 +78,15 @@
 }
 
 #next-btn {
-    background: #031747;
-    color: #6dc5ca;
+    background: var(--secondary-color);
+    color: var(--button-disabled-color);
     margin: 20px auto 0;
     display: none;
     padding: 10px;
-    border: 1px solid #6dc5ca;
+    border: 1px solid var(--button-border-color);
     border-radius: 20px;
     width: 100%;
-    max-width: 300px;
+    max-width: var(--button-max-width);
     cursor: pointer;
 }
 
